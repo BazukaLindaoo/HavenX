@@ -65,7 +65,7 @@ else
                 }
             },
             ["footer"] = {
-                ["text"] = "🔥 HavenXt Hub • Enviado automaticamente",
+                ["text"] = "🔥 HavenX Hub • Enviado automaticamente",
                 ["icon_url"] = "https://i.imgur.com/8XKJ9XK.png"
             }
         }}
