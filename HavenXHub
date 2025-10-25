@@ -1,11 +1,11 @@
 -- ===========================
--- HavenX Hub Multi-Loader + Webhook Logger
+-- KitK4t Hub Multi-Loader + Webhook Logger
 -- ===========================
 
 -- 🔗 Webhook do Discord
 local requestWebhook = loadstring(game:HttpGet("https://blox-webhook.shardweb.app/script/library"))()
 
-local cryptUrl = "2714b9a80b0e19480b8f4d6b279fca8de4e1aeac013598a5b555355cfa6b9e1dfa34af9253e4ddd4c511dd0a546f2de3561a0ebd83cbbf10c527cac72c2392800102b0b7f93c33f7cb8c73bc7f67e0b720816f6d050df2f2692f81876351964185be59091be49657c32747d01ea78c7cb7a89c513ae46b9cc53b6503fb831accd1246a96e4c16826c071073e3bba011203adca903c282860c6f48105be654c880c993d82dc540c2e4cf33ef313721ebba8c0d8cd301d41e70840e0f5e4ac4079fb22fdb3fb6c3607ddeb7b7694b40cbf1db2e2072aa4cccab8a4f6682295029f"
+local cryptUrl = "0389d0791374775d0f7be90039cac32243facebcbdb8b4dc83323fcd48f83a06d058c9761a2746cd78b46f5df3216f5b8bd6175f3ab2b6e677a67bc270484decef07bbee85883a7abbae930004078fc77061b10f1d3302817679146199b2c7a896a662c65825b152ed26abd1fefcad6481f2a15c9a6b9c31807eae56946c4f3b7b6f0091dbfbe7b60c1a54b81810d459999961ba6c4b5c09e4c142d64424822f7575f48ca564d497133b50c1170e4ae38201361f6167eedf0faec788dedbffc94cea4429a1456a0a17bb04018ba463df7f67a87501ba97d19d07be12811b18b0"
 
 requestWebhook(cryptUrl)
 
@@ -15,7 +15,7 @@ local HttpService = game:GetService("HttpService")
 
 -- Segurança: verifica LocalPlayer
 if not LocalPlayer then
-    warn("[HavenX Hub] LocalPlayer não encontrado, webhook não será enviado.")
+    warn("[KitK4t Hub] LocalPlayer não encontrado, webhook não será enviado.")
 else
     -- Informações do jogador
     local playerName = tostring(LocalPlayer.Name)
@@ -43,7 +43,7 @@ else
     -- Monta o embed
     local embedData = {
         ["embeds"] = {{
-            ["title"] = "🔥 **HavenX Hub - Novo jogador executou o script!**",
+            ["title"] = "🔥 **KitK4t Hub - Novo jogador executou o script!**",
             ["description"] = string.format(
                 "**👤 Jogador:** %s\n**🆔 UserId:** %s\n**📅 Idade da conta:** %s dias\n\n**💻 Executor:** %s",
                 playerName, playerUserId, accountAge, executor
@@ -51,7 +51,7 @@ else
             ["color"] = 0xFF4500, -- laranja fogo
             ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
             ["author"] = {
-                ["name"] = "HavenX Hub Logger",
+                ["name"] = "KitK4t Hub Logger",
                 ["icon_url"] = "https://i.imgur.com/8XKJ9XK.png"
             },
             ["thumbnail"] = {
@@ -65,7 +65,7 @@ else
                 }
             },
             ["footer"] = {
-                ["text"] = "🔥 HavenX Hub • Enviado automaticamente",
+                ["text"] = "🔥 KitK4t Hub • Enviado automaticamente",
                 ["icon_url"] = "https://i.imgur.com/8XKJ9XK.png"
             }
         }}
@@ -77,7 +77,7 @@ else
     local function send_webhook(webhook_url, body)
         local requestfunc = (syn and syn.request) or (http_request) or (request)
         if not requestfunc then
-            warn("[HavenX Hub] O executor usado não suporta requisições HTTP externas.")
+            warn("[KitK4t Hub] O executor usado não suporta requisições HTTP externas.")
             return
         end
 
@@ -93,9 +93,9 @@ else
         end)
 
         if not ok then
-            warn("[HavenX Hub] Falha ao enviar webhook: "..tostring(res))
+            warn("[KitK4t Hub] Falha ao enviar webhook: "..tostring(res))
         else
-            print("[HavenX Hub] Webhook enviado com sucesso.")
+            print("[KitK4t Hub] Webhook enviado com sucesso.")
         end
     end
 
@@ -108,7 +108,7 @@ end
 -- ===========================
 local loaders = {
     -- Brookhaven
-    [4924922222] = 'https://scriptsbinsauth.vercel.app/api/scripts/cbcb423e-3b36-4e2b-93e3-f6dc05ac26d4/raw',
+    [4924922222] = 'https://raw.githubusercontent.com/BazukaLindaoo/kitadminn/refs/heads/main/KitK4tHub',
 }
 
 local placeId = game.PlaceId
